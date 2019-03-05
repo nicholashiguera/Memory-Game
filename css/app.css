@@ -118,10 +118,10 @@ h1 {
  */
 
 .modal {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed;
   z-index: 1;
-  padding-top: 300px;
+  padding-top: 200px;
   left: 0;
   top: 0;
   width: 100%;
@@ -132,12 +132,14 @@ h1 {
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 8px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-style: solid;
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
 }
 
 span#close {
@@ -145,5 +147,24 @@ span#close {
 }
 
 span#game {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.images {
+    display: block;
+    padding-left: 550px;
+}
+
+img.win {
+    display: block;
+}
+
+img.trophy {
+    display: block;
+    margin-left: 20px;
+    margin-top: 25px;
 }
