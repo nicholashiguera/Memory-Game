@@ -26,7 +26,6 @@ let allActiveCards = document.querySelectorAll('.card');
 // function call to process cards and game.
 cardsProcessing(allActiveCards);
 
-
 /**
 * @description Displays the shuffled cards in the board.
 * @param       - None
@@ -122,6 +121,7 @@ function cardMatch(card1, card2){
 
   cardMatchCounter+=1;
   winning(cardMatchCounter);
+
 }
 
 
@@ -243,8 +243,6 @@ function winning(counter) {
   let modal = document.getElementById('winningModal');
   let close = document.getElementById('close');
 
-  timerReset(timer);
-
   if(counter == 8){
     modal.style.display = 'block';
   }
@@ -259,6 +257,7 @@ function winning(counter) {
     }
   }
 }
+
 
 
 /**
@@ -276,6 +275,10 @@ function modalInfo(finalMoves) {
 
   info = 'You finished the game in ' + timeMin + ":" + timeSec + ' using ' + finalMoves + ' moves and achieving a ' + finalStars + ' Star Rating!!!';
   modal.innerHTML = info;
+  
+  if(document.getElementById('winningModal').style.display == 'block'){
+    timerReset(timer);
+  }
 
 }
 
