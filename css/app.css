@@ -29,7 +29,6 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -112,4 +111,39 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+/*
+ * Styles for the Modal
+ */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  padding-top: 300px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+span#close {
+    float: right;
+}
+
+span#game {
+    width: 90%;
 }
